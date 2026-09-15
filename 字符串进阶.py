@@ -65,7 +65,7 @@ print(result)
 text = "Hello World"
 print(text[0])      # H
 print(text[-1])     # d
-print(text[0:5])    # Hello
+print(text[0:7])    # Hello
 print(text[:5])     # Hello（省略起点，从0开始）
 print(text[6:])     # World（省略终点，到最后）
 
