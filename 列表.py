@@ -87,7 +87,7 @@ print(user_msgs)  # ['你好', '再见']
 
 
 
-
+"""
 nums = [3, 1, 4, 1, 5]
 
 print(len(nums))       # 5（长度）
@@ -97,3 +97,15 @@ print(min(nums))       # 1（最小值）
 print(sorted(nums))    # [1, 1, 3, 4, 5]（返回新列表，原列表不变）
 print(nums.count(1))   # 2（统计出现次数）
 print(1 in nums)       # True（成员判断）
+"""
+
+
+"""
+data = [
+    {"name": "A", "score": 80},
+    {"name": "B", "score": 95},
+    {"name": "C", "score": 88}
+]
+result = sorted(data,key=lambda x:x["score"],reverse=True)
+print(result)
+"""
