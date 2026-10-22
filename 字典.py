@@ -49,7 +49,7 @@ for key, value in user.items():
 """
 
 
-
+"""
 response = {
     "id": "chatcmpl-123",
     "choices": [
@@ -73,3 +73,18 @@ print(content)  # 你好！有什么可以帮你？
 
 # 安全写法（防报错）
 content = response.get("choices", [{}])[0].get("message", {}).get("content", "")
+"""
+
+
+
+defaults = {"temperature": 0.7, "max_tokens": 1000}
+user_config = {"temperature": 0.9}
+
+# 方式1：update（原地修改）,update返回值是None，如果写成config = defaults.update(user_config)，config = None
+config = defaults.copy()
+config.update(user_config)
+print(config)  # {'temperature': 0.9, 'max_tokens': 1000}
+
+# 方式2：解包（Python 3.5+，推荐）
+config = {**defaults, **user_config}
+print(config)  # {'temperature': 0.9, 'max_tokens': 1000}
